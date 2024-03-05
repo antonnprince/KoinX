@@ -4,7 +4,6 @@ import axios from "axios"
 import Home from './Home'
 
 function App() {
-
     useEffect(()=>{
           axios.get("/ping").then((response)=>{
             console.log(response.status)
@@ -16,8 +15,8 @@ function App() {
 
     const[status,setStatus] = useState(0)
   return (
-   <div className="bg-slate-200 h-screen mx-2">
-    {status!==200? <h1>Network Error, please try again later</h1>: <Home />}
+   <div className="bg-slate-200 h-screen">
+    {status!==200? <h1>Network Error, please refresh webpage</h1>: <Home />}
    </div>
   )
 }

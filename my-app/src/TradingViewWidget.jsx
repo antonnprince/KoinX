@@ -1,6 +1,5 @@
 // TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from 'react';
-import axios from "axios";
 
 function TradingViewWidget() {
   const container = useRef();
@@ -19,21 +18,21 @@ function TradingViewWidget() {
             ]
           ],
           "chartOnly": false,
-          "width": 550,
-          "height": 400,
+          "width": "100%",
+          "height": "100%",
           "locale": "en",
           "colorTheme": "light",
-          "autosize": false,
+          "autosize": true,
           "showVolume": false,
           "showMA": false,
           "hideDateRanges": false,
           "hideMarketStatus": false,
           "hideSymbolLogo": false,
-          "scalePosition": "right",
+          "scalePosition": "left",
           "scaleMode": "Normal",
           "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
           "fontSize": "10",
-          "noTimeScale": false,
+          "noTimeScale": true,
           "valuesTracking": "1",
           "changeMode": "price-and-percent",
           "chartType": "area",
@@ -44,32 +43,22 @@ function TradingViewWidget() {
           "lineType": 0,
           "dateRanges": [
             "1d|1",
+            "1w|15",
             "1m|30",
             "3m|60",
+            "6m|120",
             "12m|1D",
-            "60m|1W",
             "all|1M"
-          ]
+          ],
+          "lineColor": "rgba(49, 121, 245, 1)"
         }`;
       container.current.appendChild(script);
-
-      axios.get("/simple/price", {
-        params: {
-          ids:"bitcoin",
-          vs_currencies:"inr,usd",
-          include_24hr_change:"true"
-        }
-      }).then((response)=>{
-            console.log(response)
-      }).catch((error)=>console.log(error))
     },
-
-    
     []
   );
 
   return (
-    <div className="tradingview-widget-container" ref={container}>
+    <div className="tradingview-widget-container h-screen mx-2" ref={container}>
       <div className="tradingview-widget-container__widget"></div>
       <div className="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span className="blue-text">Track all markets on TradingView</span></a></div>
     </div>

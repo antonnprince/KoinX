@@ -5,7 +5,7 @@ import koinx from "./koinx.svg"
 const Nav = () => {
   return (
     <nav className='bg-white text-black flex flex-row justify-between h-20 box-shadow-md'>
-    <img src={koinx} className='w-24 h-24 px-2 my-auto'/>
+    <img src={koinx} className='w-24 h-20 ml-4 px-2'/>
       <ul className='hidden md:flex flex-row text-lg font-bold justify-end space-x-8'>
         <li className='my-auto'>
             Crypto Taxes

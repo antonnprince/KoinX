@@ -12,8 +12,9 @@ const BTC = () => {
       <div className='h-screen w-full'>
       <TradingViewWidget />
       </div>
-      <div className='hidden lg:block  flex-col mx-8 space-y-12 w-1/2'>
-        <div className='hidden lg:block bg-blue-600 rounded-2xl text-center h-96 space-y-4 pt-4'>
+
+      <div className='block flex-col mx-auto lg:mx-8 w-auto lg:w-1/2 space-y-8 '>
+        <div className='block bg-blue-600 rounded-2xl text-center h-96 space-y-4 pt-4'>
             <h1 className='text-white text-2xl font-semibold mx-12 mt-8 '>Get started with KoinX <br/> for FREE</h1>
             <p className='text-lg text-white w-96 mx-auto my-8'>
               With our range of features that you can equip for free, KoinX allows you to be more educated and aware of your tax reports

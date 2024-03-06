@@ -58,7 +58,7 @@ function TradingViewWidget() {
   );
 
   return (
-    <div className="tradingview-widget-container h-screen mx-2" ref={container}>
+    <div className="tradingview-widget-container h-screen mx-auto md:mx-2" ref={container}>
       <div className="tradingview-widget-container__widget"></div>
      
     </div>

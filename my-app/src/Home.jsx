@@ -5,8 +5,9 @@ const Home = () => {
   return (
     <>
       <Nav />
-      <BTC />
-     
+      <div className='flex-col-reverse lg:flex-col'>
+       <BTC />
+      </div>
     </>
   );
 }

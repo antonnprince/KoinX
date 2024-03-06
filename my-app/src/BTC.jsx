@@ -2,15 +2,16 @@ import React, { useEffect } from 'react'
 import TradingViewWidget from './TradingViewWidget'
 import axios from "axios"
 
+
 const BTC = () => {
   useEffect(()=>{
-    axios.get("simple/price?x_cg_demo_api_key=CG-Sf272gjPaSaVfanhUJgYNW1k", {
-      params: {
-        ids: "bitcoin",
-        vs_currencies: "inr",
-        //include_24hr_change: true,
-      }}).then((response) => {
-      console.log(response)
+    axios.get("https://api.coingecko.com/api/v3/simple/price",{
+      params:{
+        ids:'bitcoin',
+        vs_currencies:'inr,usd'
+      }
+    }).then((response) => {
+      console.log(response.data)
     }).catch((error) => console.log(error))
   },[])
 

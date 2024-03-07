@@ -24,7 +24,7 @@ const Trending = () => {
                         <h2 className='text-xl text-black font-semibold'>{coin.item.name}<span>({coin.item.symbol})</span></h2>
                     </>
 
-                    <h1 className='text-xl text-right text-green-600 font-semibold'>{coin.item.data.price_change_percentage_24h.btc.toFixed(2)} </h1>
+                    <h1 className='text-xl text-right text-green-600 font-semibold'>{coin.item.data.price_change_percentage_24h.btc.toFixed(2)}% </h1>
                 </div>
         </div>
     ))
